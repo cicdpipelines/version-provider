@@ -24,15 +24,10 @@ build:
 
 package:
 	$(shell rm -rf build/archive)
-	$(eval UNIX_FILES := $(shell ls build | grep -v ${provider} | grep -v windows))
-	$(eval WINDOWS_FILES := $(shell ls build | grep -v ${provider} | grep windows))
+	$(eval ARTIFACTS := $(shell ls build | grep -v ${provider}))
 	@mkdir -p build/archive
-	@for f in $(UNIX_FILES); do \
+	@for f in $(ARTIFACTS); do \
 		echo Packaging ${provider}_$$f && \
 		(cd $(shell pwd)/build/$$f && tar -czf ../archive/${provider}_$$f.tar.gz ${provider}*); \
-	done
-	@for f in $(WINDOWS_FILES); do \
-		echo Packaging ${provider}_$$f && \
-		(cd $(shell pwd)/build/$$f && zip ../archive/${provider}_$$f.zip ${provider}*); \
 	done
 	ls -lah build/archive/
