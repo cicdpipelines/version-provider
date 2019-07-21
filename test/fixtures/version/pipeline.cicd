@@ -1,0 +1,5 @@
+provider "version" {}
+
+step "version_semver" "generate_version" {
+    directory = "../../../"
+}
