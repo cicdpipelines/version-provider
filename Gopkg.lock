@@ -3,7 +3,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:f24f9df32020c124bd37a52bdca8042d1c3aa07e86806e28c3a5cefddb14b1fb"
+  digest = "1:cc310cbb2c2077dfe7363e3041ea8487defd97ed099c9c5fd7045fcf17623374"
   name = "github.com/NoUseFreak/cicd"
   packages = [
     "internal/pkg/server",
@@ -14,7 +14,7 @@
     "pkg/version",
   ]
   pruneopts = "UT"
-  revision = "df3a7128579d3dd2682e850a3e36a88eee4cf343"
+  revision = "fa6102bfacc441b13ffce669505ad1cfa4e4e3ea"
 
 [[projects]]
   digest = "1:b498b36dbb2b306d1c5205ee5236c9e60352be8f9eea9bf08186723a9f75b4f3"

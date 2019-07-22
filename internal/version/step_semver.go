@@ -32,7 +32,9 @@ func stepSemver() *cicd.Step {
 				return nil, err
 			}
 
-			resp := cicd.StepResponse{}
+			resp := cicd.StepResponse{
+				Status: true,
+			}
 			resp.SetString("version", v)
 
 			return &resp, nil
